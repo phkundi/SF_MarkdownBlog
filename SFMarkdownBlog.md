@@ -2,7 +2,7 @@
 
 To make this work, create a new folder: /app/blog/_assets/articles
 
-Create and edit your markdown (.md) articles here.
+Create and edit your markdown (.md) articles here. Make sure that the filename matches the slug that you assign the article in the `content.js` file. For example: **"myPost.md" -> {slug: "myPost"}**
 
 Also, in the /app/blog/_assets/content.js file, remove the `content` key from the articles object.
 
