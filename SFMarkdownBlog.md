@@ -51,7 +51,7 @@ const renderMarkdown = (markdown) => {
 
 ```
 
-### Create new file: app/blog/components/MarkdownContent.js
+### Create new file: app/blog/_assets/components/MarkdownContent.js
 
 ```javascript
 import React from "react";
@@ -94,6 +94,9 @@ export const MarkdownContent = ({ htmlString }) => {
 ### Edit app/blog/[articleId]/page.js
 
 ```javascript
+import { getPostContent } from "@/libs/markdown";
+import { MarkdownContent } from "../_assets/components/MarkdownContent";
+
 export default async function Article({ params }) {
   const article = articles.find((article) => article.slug === params.articleId);
   const { content } = getPostContent(article.slug);
